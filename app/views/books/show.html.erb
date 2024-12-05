@@ -1,3 +1,6 @@
+<div>
+  <%= flash[:notice] %>
+</div>
 <div class='container px-5 px-sm-0'>
  <div class='row'>
   <%= render 'list', book: @book, user: @user %>    
@@ -7,7 +10,7 @@
         <tbody>
           <tr>
             <td>
-            <%= image_tag @user.get_profile_image(100,100) %>
+            <%= image_tag @user.get_profile_image(100,100) %><br>
             <%= link_to @user.name, user_path(@user) %>
             </td>
             <td><%= link_to @book.title, book_path(@book) %></td>
